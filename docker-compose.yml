@@ -1,0 +1,30 @@
+services:
+  api:
+    build: .
+    container_name: pcsi-api
+    command: uvicorn apps.api.main:app --host 0.0.0.0 --port 8000 --reload
+    env_file:
+      - .env
+    environment:
+      PYTHONPATH: /app/src
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
+
+  dashboard:
+    build: .
+    container_name: pcsi-dashboard
+    command: streamlit run apps/dashboard/streamlit_app.py --server.address 0.0.0.0 --server.port 8501
+    env_file:
+      - .env
+    environment:
+      PYTHONPATH: /app/src
+      API_BASE_URL: http://api:8000/api/v1
+      DASHBOARD_DEMO_MODE: "true"
+    ports:
+      - "8501:8501"
+    volumes:
+      - .:/app
+    depends_on:
+      - api

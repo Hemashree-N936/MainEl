@@ -1,0 +1,67 @@
+# Environment and secrets
+.env
+.env.*
+!.env.example
+*.secret
+*.secrets
+*.key
+*.pem
+*.p12
+*.pfx
+id_rsa
+id_ed25519
+
+# Python virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Python caches and tooling
+__pycache__/
+*.py[cod]
+*$py.class
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Local databases and generated runtime data
+*.db
+*.sqlite
+*.sqlite3
+data/sqlite/*
+!data/sqlite/.gitkeep
+data/repositories/*
+!data/repositories/.gitkeep
+
+# Logs and temporary files
+logs/*
+!logs/.gitkeep
+*.log
+*.tmp
+*.temp
+tmp/
+temp/
+
+# Build and packaging outputs
+build/
+dist/
+*.egg-info/
+.eggs/
+artifacts/models/*
+!artifacts/models/.gitkeep
+
+# Local cloned repositories and scan targets
+juice-shop/
+
+# IDE, OS, and notebook noise
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
+
+# Docker/local override files
+docker-compose.override.yml

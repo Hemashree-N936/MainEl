@@ -1,0 +1,22 @@
+FEATURE_COLUMNS = [
+    "commit_count",
+    "commit_frequency_per_week",
+    "code_churn",
+    "contributor_count",
+    "dependency_change_commits",
+    "branch_count",
+    "active_days",
+    "weekend_commit_ratio",
+    "off_hours_commit_ratio",
+    "max_branch_commits",
+    "dependency_count",
+    "commit_files_changed_avg",
+    "commit_insertions_avg",
+    "commit_deletions_avg",
+    "critical_vulnerability_count",
+    "high_vulnerability_count",
+    "known_vulnerability_count",
+    "repository_age_days",
+    "health_score",
+]
+
